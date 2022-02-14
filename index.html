@@ -5,36 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Chat App</title>
-    <link rel="stylesheet" href="style.css">
-    <script  src="/socket.io/socket.io.js" defer></script>
-  <script src="/client.js" defer ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="/client.js" defer></script>
   </head>
-  
-  <body >
+
+  <body>
     <nav>
       <img src="/images/logo.png" id="logo" alt="" />
     </nav>
     <hr />
     <div class="mymargin"></div>
     <div class="container">
-      <div class="myheading">My Chat App</div>
+      <div class="myheading">
+        <div id="head1">My Chat App</div>
+        <div id="usersonline"><div id="activeusers">0 Active</div></div>
+      </div>
       <div id="messagebox">
         <!--
         <div class="message right">Viraj : okay</div>
         <div class="message left">Harshal : Hnnnn</div> -->
       </div>
       <div id="messagesendbox">
-          <form action="#" id="sendcont">
-              <input type="text" name="sent_msg" id="sent_msg" >
-              <button id="sendbtn">Send</button>
-          </form>
+        <form action="#" id="sendcont">
+          <input type="text" name="sent_msg" id="sent_msg" />
+          <button id="sendbtn">Send</button>
+        </form>
       </div>
     </div>
   </body>
-  
+
   <script>
-       var element = document.getElementById("messagebox");
-       element.scrollTop = element.scrollHeight;
+    var element = document.getElementById("messagebox");
+    element.scrollTop = element.scrollHeight;
   </script>
   <!-- <script src="/socket.io/socket.io.js"></script>
 <script>
